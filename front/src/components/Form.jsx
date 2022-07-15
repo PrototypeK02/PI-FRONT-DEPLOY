@@ -153,7 +153,7 @@ async function validateSubmit(e) {
     else{
         
             e.preventDefault()
-         axios.post("http://localhost:3001/videogames", inputs)
+         axios.post("https://prototypek02.herokuapp.com/videogames", inputs)
          .then(() => dispatch(getAllNames()))
          .then(() =>dispatch({type: CHANGE_PAGE, payload: 1}))
          .then(() => alert("VideoGame Created!!. You'll be redirected to home in 5 seconds"))
